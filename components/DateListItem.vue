@@ -10,7 +10,10 @@
     </v-list-item-content>
 
     <v-list-item-action>
-      <v-icon color="accent">
+      <v-icon 
+       color="accent"
+       @click="onRemove()"
+       >
         mdi-delete
       </v-icon>
     </v-list-item-action>
@@ -26,9 +29,9 @@ export default {
       type: DateTime,
       required: true,
     },
-  },
-  data() {
-    return {
+    onRemove:{
+      type:Function,
+      default:()=>{}
     }
   }
 }
